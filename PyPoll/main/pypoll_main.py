@@ -46,6 +46,7 @@ with open(output_file, "w") as file:
     file.write(f"Winner: {winner}\n")
     file.write("------------------------------\n")
 
+# printing the resultls in current code
 print("")
 print("Election Results")
 print("")
