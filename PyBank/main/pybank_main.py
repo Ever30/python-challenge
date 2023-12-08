@@ -38,12 +38,11 @@ with open(output_file, "w") as file:
             #total profit/loss
             total_profit_loss += current_profit_loss
 
-            # calculate change from previous month
+            # calculating changes from previous month
             if total_months > 1:
                 profit_loss_change = current_profit_loss - previous_profit_loss
                 profit_loss_changes.append(profit_loss_change)
 
-                # track greatest increase and decrease
                 if profit_loss_change > max_increase:
                     max_increase = profit_loss_change
                
@@ -54,7 +53,6 @@ with open(output_file, "w") as file:
                     max_decrease = profit_loss_change
                     max_decrease_date = row[0]  # Date corresponding to max decrease
 
-            # Update previous profit/loss for the next iteration
             previous_profit_loss = current_profit_loss
 
     # Calculate the average change
