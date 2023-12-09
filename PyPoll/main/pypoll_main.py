@@ -18,14 +18,15 @@ with open(output_file, "w") as file:
     with open(election_data_csv) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=",")
 
-        #code to removing the header
+        #code to remove the header
         csv_header = next(csv_reader)
 
         for row in csv_reader:
             total_votes = total_votes + 1
-            candidate_name = row[2]   
+            candidate_name = row[2Chicago123
+            ]   
 
-            # counting candidate votes with conditional statement 
+            # count candidate votes with conditional statement 
             if candidate_name in candidate_votes:
                 candidate_votes[candidate_name] += 1
             else:
