@@ -6,7 +6,7 @@ output_file = os.path.join("..", "analysis", "results.txt")
 
 with open(output_file, "w") as file:    
     file.write("Financial Analysis\n")
-    file.write("---------------------------------\n")
+    file.write("-" * 20 + "\n")
 
     # Declaring variables
     total_months = 0
@@ -23,7 +23,7 @@ with open(output_file, "w") as file:
     with open(budget_data_csv) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=",")
     
-        #code to removing the header
+        #code to remove the header
         csv_header = next(csv_reader)
 
      
@@ -51,7 +51,7 @@ with open(output_file, "w") as file:
 
                 if profit_loss_change < max_decrease:
                     max_decrease = profit_loss_change
-                    max_decrease_date = row[0]  # Date corresponding to max decrease
+                    max_decrease_date = row[0]   
 
             previous_profit_loss = current_profit_loss
 
