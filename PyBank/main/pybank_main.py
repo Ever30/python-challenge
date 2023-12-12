@@ -4,10 +4,10 @@ import csv
 budget_data_csv = os.path.join("..", "Resources", "budget_data.csv")
 output_file = os.path.join("..", "analysis", "results.txt")
 
-with open(output_file, "w") as file:  
+with open(output_file, "w") as f:  
       
-    file.write("Financial Analysis\n")
-    file.write("-" * 20 + "\n")
+    f.write("Financial Analysis\n")
+    f.write("-" * 20 + "\n")
 
     # Declaring variables
     months = 0
@@ -61,11 +61,11 @@ with open(output_file, "w") as file:
     average_change = (round(sum(profit_loss_changes) / len(profit_loss_changes),2))
     
     
-    file.write(f"Total Months: {months}\n")
-    file.write(f"Total: ${total_loss}\n")
-    file.write(f"Average Change: $ {(round(average_change,2))}\n")
-    file.write(f"Greatest Increase in Profits: {max_increase_date} (${max_increase})\n")
-    file.write(f"Greatest Decrease in Profits: {max_decrease_date} (${max_decrease})\n")
+    f.write(f"Total Months: {months}\n")
+    f.write(f"Total: ${total_loss}\n")
+    f.write(f"Average Change: $ {(round(average_change,2))}\n")
+    f.write(f"Greatest Increase in Profits: {max_increase_date} (${max_increase})\n")
+    f.write(f"Greatest Decrease in Profits: {max_decrease_date} (${max_decrease})\n")
 
 print ("")
 print("Financial Analysis")
@@ -82,5 +82,5 @@ print(f"Greatest Increase in Profits: {max_increase_date} (${max_increase})")
 print("")
 print(f"Greatest Decrease in Profits: {max_decrease_date} (${max_decrease})")
 print("")
-print("Your file was successfully created!")
-print("")
+print("Your file was created!")
+
